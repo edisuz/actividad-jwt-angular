@@ -1,51 +1,11 @@
-<div class="container mt-5">
+<!-- Agregar 
+los inputs
+formControlName
+botón 
+disabled -->
 
-    <div class="row justify-content-center">
+<form [formGroup]="formLogin">
 
-        <div class="col-md-4">
+    <!-- Completar -->
 
-            <div class="card">
-
-                <div class="card-body">
-
-                    <h3 class="mb-4">
-
-                        Iniciar Sesión
-
-                    </h3>
-
-                    <form [formGroup]="formLogin">
-
-                        <div class="mb-3">
-
-                            <label> Usuario </label>
-                            <input class="form-control" formControlName="username">
-
-                        </div>
-
-                        <div class="mb-3">
-
-                            <label>
-                                Contraseña
-                            </label>
-
-                            <input type="password" class="form-control" formControlName="password">
-                        </div>
-
-                        <button class="btn btn-primary w-100" [disabled]="formLogin.invalid" (click)="ingresar()">
-
-                            Iniciar sesión
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+</form>

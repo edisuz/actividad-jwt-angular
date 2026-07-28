@@ -10,47 +10,21 @@ import { Router } from '@angular/router';
 
 export class LoginComponent {
 
-  constructor(
-    private router: Router,
-    private fb: FormBuilder,
-    private authService: AuthService
-  ) { }
+  /* Implementar:
+  
+  FormBuilder
+  Validators
+  AuthService
+  Router
+  login()
+  */
 
-  formLogin = this.fb.group({
+  constructor() { }
 
-    username: [
-      '',
-      [
-        Validators.required
-      ]
-    ],
 
-    password: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(6)
-      ]
-    ]
-
-  });
+  formLogin = ''
 
   ingresar() {
-
-    if (this.formLogin.invalid) {
-      return;
-    }
-
-    this.authService.login(this.formLogin.value as any)
-      .subscribe({
-        next: (resp) => {
-          console.log(resp);
-          this.router.navigate(['/dashboard']);
-        },
-        error: (err) => {
-          console.error(err);
-        }
-      });
 
   }
 

@@ -10,26 +10,26 @@ import { LoginResponse } from '../models/login-response.model';
 })
 
 export class AuthService {
+  /* Implementar
+  HttpClient
+login()
+getToken()
+logout()
+  
+  */
 
   private api = 'https://dummyjson.com/auth';
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  login(usuario: LoginRequest) {
-    return this.http.post<LoginResponse>(`${this.api}/login`, usuario)
-      .pipe(
-        tap(resp => {
-          localStorage.setItem('token', resp.accessToken);
-        })
-      );
-  }
 
-  getToken(): string | null {
-    return localStorage.getItem('token');
+
+  getToken() {
+
   }
 
   logout(): void {
-    localStorage.removeItem('token');
+
   }
 
 
